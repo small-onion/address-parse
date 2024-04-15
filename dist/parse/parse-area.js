@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * address-parse
@@ -33,7 +33,7 @@ var ProvinceKeys = ['特别行政区', '古自治区', '维吾尔自治区', '�
 
 var CityKeys = ['布依族苗族自治州', '苗族侗族自治州', '藏族羌族自治州', '哈尼族彝族自治州', '壮族苗族自治州', '傣族景颇族自治州', '蒙古族藏族自治州', '傣族自治州', '白族自治州', '藏族自治州', '彝族自治州', '回族自治州', '蒙古自治州', '朝鲜族自治州', '地区', '哈萨克自治州', '盟', '市'];
 
-var AreaKeys = ['满族自治县', '满族蒙古族自治县', '蒙古族自治县', '朝鲜族自治县', '回族彝族自治县', '彝族回族苗族自治县', '彝族苗族自治县', '土家族苗族自治县', '布依族苗族自治县', '苗族布依族自治县', '彝族傣族自治县', '傣族彝族自治县', '仡佬族苗族自治县', '黎族苗族自治县', '苗族侗族自治县', '哈尼族彝族傣族自治县', '哈尼族彝族自治县', '彝族哈尼族拉祜族自治县', '傣族拉祜族佤族自治县', '傣族佤族自治县', '拉祜族佤族布朗族傣族自治县', '苗族瑶族傣族自治县', '彝族回族自治县', '独龙族怒族自治县', '保安族东乡族撒拉族自治县', '回族土族自治县', '撒拉族自治县', '哈萨克自治县', '塔吉克自治县', '回族自治县', '畲族自治县', '土家族自治县', '布依族自治县', '苗族自治县', '瑶族自治县', '侗族自治县', '水族自治县', '傈僳族自治县', '仫佬族自治县', '毛南族自治县', '黎族自治县', '羌族自治县', '彝族自治县', '藏族自治县', '纳西族自治县', '裕固族自治县', '哈萨克族自治县', '哈尼族自治县', '拉祜族自治县', '佤族自治县', '左旗', '右旗', '中旗', '后旗', '联合旗', '自治旗', '旗', '自治县', '街道办事处', '新区', '区', '县', '市'];
+var AreaKeys = ['满族自治县', '满族蒙古族自治县', '蒙古族自治县', '朝鲜族自治县', '回族彝族自治县', '彝族回族苗族自治县', '彝族苗族自治县', '土家族苗族自治县', '布依族苗族自治县', '苗族布依族自治县', '苗族土家族自治县', '彝族傣族自治县', '傣族彝族自治县', '仡佬族苗族自治县', '黎族苗族自治县', '苗族侗族自治县', '哈尼族彝族傣族自治县', '哈尼族彝族自治县', '彝族哈尼族拉祜族自治县', '傣族拉祜族佤族自治县', '傣族佤族自治县', '拉祜族佤族布朗族傣族自治县', '苗族瑶族傣族自治县', '彝族回族自治县', '独龙族怒族自治县', '保安族东乡族撒拉族自治县', '回族土族自治县', '撒拉族自治县', '哈萨克自治县', '塔吉克自治县', '回族自治县', '畲族自治县', '土家族自治县', '布依族自治县', '苗族自治县', '瑶族自治县', '侗族自治县', '水族自治县', '傈僳族自治县', '仫佬族自治县', '毛南族自治县', '黎族自治县', '羌族自治县', '彝族自治县', '藏族自治县', '纳西族自治县', '裕固族自治县', '哈萨克族自治县', '哈尼族自治县', '拉祜族自治县', '佤族自治县', '达斡尔族区', '达斡尔族自治旗', '左旗', '右旗', '中旗', '后旗', '联合旗', '自治旗', '旗', '自治县', '街道办事处', '新区', '区', '县', '市'];
 
 var ParseArea = function () {
   _createClass(ParseArea, null, [{
@@ -44,6 +44,7 @@ var ParseArea = function () {
         ParseArea.ProvinceShort[code] = ProvinceKeys.reduce(function (v, key) {
           return v.replace(key, '');
         }, province);
+        ParseArea.ProvinceShortList.push(ParseArea.ProvinceShort[code]);
       }
 
       for (var _code in _area2.default.city_list) {
@@ -57,6 +58,7 @@ var ParseArea = function () {
       for (var _code2 in _area2.default.area_list) {
         var area = _area2.default.area_list[_code2];
         if (area === '雨花台区') area = '雨花区';
+        if (area === '神农架林区') area = '神农架';
         if (area.length > 2 && area !== '高新区') {
           ParseArea.AreaShort[_code2] = AreaKeys.reduce(function (v, key) {
             if (v.indexOf(key) > 1) v = v.replace(key, '');
@@ -125,11 +127,26 @@ var ParseArea = function () {
             if (result.__parse && result.province && _address.includes(result.province)) {
               _address = _address.replace(result.province, '');
               result.__parse += 1;
-              if (result.city && _address.includes(result.city)) {
-                _address = _address.replace(result.city, '');
-                result.__parse += 1;
+              if (result.city) {
+                if (_address.includes(result.city)) {
+                  if (result.city !== '县' || !_address.indexOf(result.city)) {
+                    _address = _address.replace(result.city, '');
+                  }
+                  result.__parse += 1;
+                  if (result.area && _address.includes(result.area)) {
+                    result.__parse += 1;
+                  }
+                } else if (address.includes(result.city)) {
+                  result.__parse += 0.5;
+                  if (result.area && _address.includes(result.area)) {
+                    result.__parse += 1;
+                  }
+                }
+
                 if (result.area && _address.includes(result.area)) {
                   result.__parse += 1;
+                } else if (result.area && _address.includes(result.area.substr(0, 2))) {
+                  result.__parse += 0.5;
                 }
               }
             }
@@ -152,7 +169,7 @@ var ParseArea = function () {
 
       // 可信度排序
       this.results.sort(function (a, b) {
-        return a.__parse && !b.__parse ? -1 : !a.__parse && b.__parse ? 1 : a.__parse && b.__parse && a.__parse > b.__parse ? -1 : a.__parse && b.__parse && a.__parse < b.__parse ? 1 : a.__parse && a.__type === 'parseByProvince' ? -1 : b.__parse && b.__type === 'parseByProvince' ? 1 : a.name.length > b.name.length ? 1 : a.name.length < b.name.length ? -1 : 0;
+        return !a.__parse && !b.__parse && a.city && !b.city ? -1 : !a.__parse && !b.__parse && !a.city && b.city ? 1 : a.__parse && !b.__parse ? -1 : !a.__parse && b.__parse ? 1 : a.__parse && b.__parse && a.__parse > b.__parse ? -1 : a.__parse && b.__parse && a.__parse < b.__parse ? 1 : a.__parse && a.__type === 'parseByProvince' ? -1 : b.__parse && b.__type === 'parseByProvince' ? 1 : a.name.length > b.name.length ? 1 : a.name.length < b.name.length ? -1 : 0;
       });
 
       return this.results;
@@ -232,8 +249,26 @@ var ParseArea = function () {
             __address = ParseArea.parse_area_by_province(address, result);
           }
           if (result.city) {
-            address = __address;
             result.__parse = true;
+            address = __address;
+            // 因为详细地址内包含其他地区数据导致解析失败的解决方案
+            // 为避免边界问题 含省份名才触发，如果是伊宁市上海城徐汇苑不触发
+            if (index > 4 && ParseArea.ProvinceShortList.some(function (shortProvince) {
+              return result.name.includes(shortProvince);
+            })) {
+              var _ParseArea$parseByPro = ParseArea.parseByProvince(result.name),
+                  _ParseArea$parseByPro2 = _slicedToArray(_ParseArea$parseByPro, 1),
+                  _result = _ParseArea$parseByPro2[0];
+
+              if (_result.__parse) {
+                Object.assign(result, _result);
+                address = addressBase.substr(index).trim();
+                if (!result.area) {
+                  address = ParseArea.parse_area_by_city(address, result);
+                }
+                result.__parse = 3;
+              }
+            }
             break;
           } else {
             //如果没有识别到地区 缓存本次结果，并重置数据
@@ -724,6 +759,24 @@ var ParseArea = function () {
               result.name = leftAddress;
             }
           }
+
+          // 出现同省地区匹配错误处理，广东省惠来县惠城镇 如不经处理匹配到 广东省惠州市惠城区
+          if (_provinceName && !_cityName) {
+            var _ParseArea$parseByAre = ParseArea.parseByArea(address.substr(0, index)),
+                _ParseArea$parseByAre2 = _slicedToArray(_ParseArea$parseByAre, 1),
+                _result = _ParseArea$parseByAre2[0];
+
+            if (_result && _result.__parse) {
+              Object.assign(result, _result);
+              address = address.substr(index).trim();
+              if (!result.area) {
+                address = ParseArea.parse_area_by_city(address, result);
+              }
+              result.__parse = 2;
+              break;
+            }
+          }
+          if (shortArea && address.charAt(index + areaLength) === '县') index += 1;
           address = address.substr(index + areaLength);
 
           if (_provinceName || _cityName) {
@@ -752,6 +805,7 @@ var ParseArea = function () {
 }();
 
 ParseArea.isInit = false;
+ParseArea.ProvinceShortList = [];
 ParseArea.ProvinceShort = {};
 ParseArea.CityShort = {};
 ParseArea.AreaShort = {};

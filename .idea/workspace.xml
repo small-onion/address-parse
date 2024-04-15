@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5511bc8b-562b-4582-8c27-5a3123a10d38" name="Default" comment="update 1.2.1">
+    <list default="true" id="5511bc8b-562b-4582-8c27-5a3123a10d38" name="Default" comment="update 1.2.15 优化识别结果">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mca.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/parse/parse-area.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/parse/parse-area.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/area.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/area.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/js/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/js/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/area.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/area.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,15 +20,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -39,37 +41,49 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="PhpServers">
-    <servers />
-  </component>
   <component name="ProjectId" id="1V3MUuzAjU7KAGgIKeDZGmhtBXL" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/js" />
-    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="sshConsole" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\github\address-parse\docs\js" />
       <recent name="D:\github\address-parse\docs\js" />
+      <recent name="D:\github\address-parse\dist" />
       <recent name="D:\github\address-parse\src" />
       <recent name="D:\github\address-parse" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\github\address-parse\docs\js" />
+    </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/address-parse/docs/index.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:3031/address-parse/docs/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/test.js" working-dir="$PROJECT_DIR$/src">
       <method v="2" />
     </configuration>
     <configuration name="build-web" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -92,26 +106,27 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="npm.build-web" />
         <item itemvalue="npm.build_test" />
+        <item itemvalue="npm.test" />
+        <item itemvalue="Node.js.test.js" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SshConsoleOptionsProvider">
     <option name="myEncoding" value="GBK" />
     <option name="myConnectionType" value="CURRENT_VAGRANT" />
@@ -149,77 +164,27 @@
       <workItem from="1593332194736" duration="3562000" />
       <workItem from="1593522798804" duration="4917000" />
       <workItem from="1594480722925" duration="655000" />
-      <workItem from="1594629973607" duration="1278000" />
-    </task>
-    <task id="LOCAL-00001" summary="项目重构 1.0.0">
-      <created>1572182652861</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1572182652861</updated>
-    </task>
-    <task id="LOCAL-00002" summary="添加测试地址">
-      <created>1572183618243</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1572183618243</updated>
-    </task>
-    <task id="LOCAL-00003" summary="打包文件 commit">
-      <created>1572183654405</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1572183654405</updated>
-    </task>
-    <task id="LOCAL-00004" summary="npm包发布，更新使用方法">
-      <created>1572185246795</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1572185246795</updated>
-    </task>
-    <task id="LOCAL-00005" summary="规范数据对象命名">
-      <created>1572186439459</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1572186439459</updated>
-    </task>
-    <task id="LOCAL-00006" summary="更新文档使用说明">
-      <created>1572187133194</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1572187133194</updated>
-    </task>
-    <task id="LOCAL-00007" summary="添加repository homepage">
-      <created>1572187566334</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1572187566334</updated>
-    </task>
-    <task id="LOCAL-00008" summary="license">
-      <created>1572188350690</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1572188350690</updated>
-    </task>
-    <task id="LOCAL-00009" summary="issues">
-      <created>1572189363416</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1572189363416</updated>
-    </task>
-    <task id="LOCAL-00010" summary="包内添加npm依赖">
-      <created>1572189407725</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1572189407725</updated>
+      <workItem from="1594629973607" duration="2161000" />
+      <workItem from="1598341914110" duration="642000" />
+      <workItem from="1600323072072" duration="1556000" />
+      <workItem from="1601185242193" duration="1592000" />
+      <workItem from="1601506865485" duration="1798000" />
+      <workItem from="1602047870525" duration="6248000" />
+      <workItem from="1602414720862" duration="1043000" />
+      <workItem from="1603940224304" duration="3451000" />
+      <workItem from="1610757223862" duration="2802000" />
+      <workItem from="1611674452469" duration="1306000" />
+      <workItem from="1617024940571" duration="3147000" />
+      <workItem from="1619017431951" duration="2883000" />
+      <workItem from="1619185094379" duration="2017000" />
+      <workItem from="1619712589175" duration="1472000" />
+      <workItem from="1619780543592" duration="5341000" />
+      <workItem from="1621433761149" duration="624000" />
+      <workItem from="1622650539520" duration="541000" />
+      <workItem from="1631063206159" duration="2081000" />
+      <workItem from="1632532454800" duration="2811000" />
+      <workItem from="1632722188056" duration="1550000" />
+      <workItem from="1640844054397" duration="1979000" />
     </task>
     <task id="LOCAL-00011" summary="修复正则表达式lastIndex问题 1.0.3">
       <created>1572191363707</created>
@@ -410,77 +375,193 @@
       <option name="project" value="LOCAL" />
       <updated>1594631208745</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="update 1.2.3">
+      <created>1594631322387</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1594631322387</updated>
+    </task>
+    <task id="LOCAL-00039" summary="gitee pages">
+      <created>1598341952507</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1598341952507</updated>
+    </task>
+    <task id="LOCAL-00040" summary="修复一个会导致地区无法识别的BUG">
+      <created>1601186128117</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1601186128117</updated>
+    </task>
+    <task id="LOCAL-00041" summary="update 1.2.4">
+      <created>1601186149384</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1601186149384</updated>
+    </task>
+    <task id="LOCAL-00042" summary="因为详细地址内包含其他地区数据导致解析失败的解决方案,优化排序">
+      <created>1602051088473</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1602051088473</updated>
+    </task>
+    <task id="LOCAL-00043" summary="update 1.2.5">
+      <created>1602051218195</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1602051218195</updated>
+    </task>
+    <task id="LOCAL-00044" summary="update 1.2.6">
+      <created>1602051856118</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1602051856118</updated>
+    </task>
+    <task id="LOCAL-00045" summary="修复神农架林区短名识别不准问题">
+      <created>1602415076047</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1602415076047</updated>
+    </task>
+    <task id="LOCAL-00046" summary="update 1.2.7">
+      <created>1602415087971</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1602415087971</updated>
+    </task>
+    <task id="LOCAL-00047" summary="出现同省地区匹配错误处理 update 1.2.8">
+      <created>1603947576247</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1603947576247</updated>
+    </task>
+    <task id="LOCAL-00048" summary="修复一个会导致地区截断错误的BUG update 1.2.9">
+      <created>1610758204358</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1610758204358</updated>
+    </task>
+    <task id="LOCAL-00049" summary="browser cache">
+      <created>1610758365510</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1610758365510</updated>
+    </task>
+    <task id="LOCAL-00050" summary="优化手机号码正则 update 1.2.10">
+      <created>1611675139175</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1611675139176</updated>
+    </task>
+    <task id="LOCAL-00051" summary="优化排序 update 1.2.11">
+      <created>1617025901235</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1617025901235</updated>
+    </task>
+    <task id="LOCAL-00052" summary="优化解析精度 update 1.2.12">
+      <created>1619019301065</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1619019301065</updated>
+    </task>
+    <task id="LOCAL-00053" summary="docs">
+      <created>1619019712589</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1619019712589</updated>
+    </task>
+    <task id="LOCAL-00054" summary="update 1.2.13 简单清洗details里面的省市区">
+      <created>1619713379169</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1619713379169</updated>
+    </task>
+    <task id="LOCAL-00055" summary="update 1.2.14 优化识别结果">
+      <created>1619796892811</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1619796892811</updated>
+    </task>
+    <task id="LOCAL-00056" summary="update 1.2.16 修复达斡尔族地区识别不正确问题">
+      <created>1631063446346</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1631063446346</updated>
+    </task>
+    <task id="LOCAL-00057" summary="update 1.2.16 修复">
+      <created>1631063506015</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1631063506015</updated>
+    </task>
+    <task id="LOCAL-00058" summary="update 1.2.17 优化排序算法，增加识别精度">
+      <created>1632534604810</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1632534604810</updated>
+    </task>
+    <task id="LOCAL-00059" summary="update 1.2.18 优化name的识别结果">
+      <created>1632722891774</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1632722891774</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update readme" />
-    <MESSAGE value="正则表达式Reg对象通过Utils暴露 1.0.4" />
-    <MESSAGE value="修复ParseArea没有解析成功就不返回数据的问题" />
-    <MESSAGE value="修复getTargetAreaListByCode值可能为undefined的错误" />
-    <MESSAGE value="打包提供单文件，供页面直接引入使用" />
-    <MESSAGE value="修复地区键名清洗会导致的问题" />
-    <MESSAGE value="update 1.1.1" />
-    <MESSAGE value="优化parse_area_by_city的解析逻辑" />
-    <MESSAGE value="update 1.1.2" />
-    <MESSAGE value="修复可能导致错误解析的问题" />
-    <MESSAGE value="修复已知问题，通过全国地址地区顺序测试" />
-    <MESSAGE value="添加在线解析测试页" />
-    <MESSAGE value="update" />
-    <MESSAGE value="修复没有parseAll的问题" />
-    <MESSAGE value="优化了name的识别逻辑，初始切分识别出的name权重高" />
-    <MESSAGE value="优化测试函数 支持字段测试" />
-    <MESSAGE value="update 1.1.4" />
-    <MESSAGE value="地区数据更新" />
-    <MESSAGE value="添加Utils.shortIndexOf改善地区短名截取效果" />
-    <MESSAGE value="update 1.2.0" />
-    <MESSAGE value="支持url参数解析，支持parseAll设置" />
-    <MESSAGE value="__parse结果改为数值类型，据此优化可信度排序" />
     <MESSAGE value="update 1.2.1" />
     <MESSAGE value="bundle增加环境判断" />
     <MESSAGE value="优化涉“新区”的地址识别" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化涉“新区”的地址识别" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="917" y="157" key="CommitChangelistDialog2" timestamp="1594631207883">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="917" y="157" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1594631207883" />
-    <state x="184" y="86" key="DiffContextDialog" timestamp="1594631198815">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594631198815" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1593569697415">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593569697415" />
-    <state width="1877" height="339" key="GridCell.Tab.0.bottom" timestamp="1594631223202">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="339" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594631223202" />
-    <state width="1877" height="339" key="GridCell.Tab.0.center" timestamp="1594631223201">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="339" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594631223201" />
-    <state width="1877" height="339" key="GridCell.Tab.0.left" timestamp="1594631223201">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="339" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594631223201" />
-    <state width="1877" height="339" key="GridCell.Tab.0.right" timestamp="1594631223202">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="339" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594631223202" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1593524706176">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593524706176" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1592491600521">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592491600521" />
+    <MESSAGE value="update 1.2.3" />
+    <MESSAGE value="gitee pages" />
+    <MESSAGE value="修复一个会导致地区无法识别的BUG" />
+    <MESSAGE value="update 1.2.4" />
+    <MESSAGE value="因为详细地址内包含其他地区数据导致解析失败的解决方案,优化排序" />
+    <MESSAGE value="update 1.2.5" />
+    <MESSAGE value="update 1.2.6" />
+    <MESSAGE value="修复神农架林区短名识别不准问题" />
+    <MESSAGE value="update 1.2.7" />
+    <MESSAGE value="出现同省地区匹配错误处理 update 1.2.8" />
+    <MESSAGE value="修复一个会导致地区截断错误的BUG update 1.2.9" />
+    <MESSAGE value="browser cache" />
+    <MESSAGE value="优化手机号码正则 update 1.2.10" />
+    <MESSAGE value="优化排序 update 1.2.11" />
+    <MESSAGE value="优化解析精度 update 1.2.12" />
+    <MESSAGE value="docs" />
+    <MESSAGE value="update 1.2.13 简单清洗details里面的省市区" />
+    <MESSAGE value="update 1.2.14 优化识别结果" />
+    <MESSAGE value="update 1.2.16 修复达斡尔族地区识别不正确问题" />
+    <MESSAGE value="update 1.2.16 修复" />
+    <MESSAGE value="update 1.2.17 优化排序算法，增加识别精度" />
+    <MESSAGE value="update 1.2.18 优化name的识别结果" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 1.2.18 优化name的识别结果" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/address_parse$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1592493951824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

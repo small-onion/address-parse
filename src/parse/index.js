@@ -14,7 +14,7 @@ class ParseAddress {
   static ParseArea = new ParseArea();
 
   static Reg = {
-    ...Utils.Reg,
+    ...Utils.Reg
   };
 
   constructor(address) {
@@ -35,7 +35,7 @@ class ParseAddress {
       this.result = {
         mobile: '',
         zip_code: '',
-        phone: '',
+        phone: ''
       };
 
       this.address = address;
@@ -50,7 +50,9 @@ class ParseAddress {
 
       for (let result of results) {
         Object.assign(result, this.result);
+        result.name = result.name.trim();
         ParseAddress.parseName(result, {firstName});
+        ParseAddress.handlerDetail(result);
       }
       if (!results.length) {
         let result = Object.assign(this.result, {
@@ -60,7 +62,7 @@ class ParseAddress {
           details: this.address,
           name: '',
           code: '',
-          __type: '',
+          __type: ''
         });
         ParseAddress.parseName(result);
         results.push(result);
@@ -125,16 +127,16 @@ class ParseAddress {
    * @param firstName 最初切分地址识别到的name
    */
   static parseName(result, {maxLen = 11, firstName} = {}) {
-    if (!result.name) {
+    if (!result.name || Utils.strLen(result.name) > 15) {
       const list = result.details.split(' ');
       const name = {
         value: '',
-        index: -1,
+        index: -1
       };
       if (list.length > 1) {
         let index = 0;
         for (const v of list) {
-          if (v || Utils.strLen(name.value) > Utils.strLen(v) || firstName && v === firstName) {
+          if (v && !name.value || v && Utils.strLen(name.value) > Utils.strLen(v) || firstName && v === firstName) {
             name.value = v;
             name.index = index;
             if (firstName && v === firstName) break;
@@ -145,17 +147,33 @@ class ParseAddress {
       if (name.value) {
         result.name = name.value;
         list.splice(name.index, 1);
-        result.details = list.join(' ');
+        result.details = list.join(' ').trim();
       }
     }
     return result.name;
   }
+
+  /**
+   * 清洗地址详情内的省市区
+   * @param result
+   */
+  static handlerDetail(result) {
+    if (result.details.length > 5) {
+      const ary = ['province', 'city', 'area'];
+      for (const key of ary) {
+        const index = result.details.indexOf(result[key]);
+        if (index !== 0) continue;
+        result.details = result.details.substr(result[key].length);
+      }
+    }
+  }
+
 }
 
 export {
   ParseAddress,
   AREA,
-  Utils,
+  Utils
 };
 
 export default new ParseAddress();
